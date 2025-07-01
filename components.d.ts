@@ -8,6 +8,21 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    IconWeatherClearCloudy: typeof import('./src/components/icons/IconWeatherClearCloudy.vue')['default']
+    IconWeatherCloudy: typeof import('./src/components/icons/IconWeatherCloudy.vue')['default']
+    IconWeatherDrizzle: typeof import('./src/components/icons/IconWeatherDrizzle.vue')['default']
+    IconWeatherHail: typeof import('./src/components/icons/IconWeatherHail.vue')['default']
+    IconWeatherIsolatedThunderstroms: typeof import('./src/components/icons/IconWeatherIsolatedThunderstroms.vue')['default']
+    IconWeatherMostlyCloudy: typeof import('./src/components/icons/IconWeatherMostlyCloudy.vue')['default']
+    IconWeatherPartlyCloudy: typeof import('./src/components/icons/IconWeatherPartlyCloudy.vue')['default']
+    IconWeatherShowers: typeof import('./src/components/icons/IconWeatherShowers.vue')['default']
+    IconWeatherSleet: typeof import('./src/components/icons/IconWeatherSleet.vue')['default']
+    IconWeatherSnow: typeof import('./src/components/icons/IconWeatherSnow.vue')['default']
+    IconWeatherSnowFlurries: typeof import('./src/components/icons/IconWeatherSnowFlurries.vue')['default']
+    IconWeatherSunny: typeof import('./src/components/icons/IconWeatherSunny.vue')['default']
+    IconWeatherThunderstroms: typeof import('./src/components/icons/IconWeatherThunderstroms.vue')['default']
+    IconWeatherTornado: typeof import('./src/components/icons/IconWeatherTornado.vue')['default']
+    IconWeatherWindy: typeof import('./src/components/icons/IconWeatherWindy.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
