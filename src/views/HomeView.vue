@@ -2,7 +2,8 @@
 </script>
 
 <template>
-  <div>
-    <p>Home</p>
+  <div class="space-y-10">
+    <CityList />
+    <CityDetails />
   </div>
 </template>
