@@ -14,7 +14,12 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
     AutoImport({
-      dts: true
+      dts: true,
+      dirs: ['./src/composables/**', './src/types/**'],
+      imports: [
+        'vue',
+        { '@tanstack/vue-query': ['useQuery'] }
+      ],
     }),
     Components({
       dts: true,
