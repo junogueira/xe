@@ -53,11 +53,13 @@ const weatherIconMap: Record<number, string> = {
 
 export const useWeatherStyle = () => {
   const getColor = (weather: Weather) => {
-    if (!weather.temperature) return 'bg-xe-blue'
+    if (!weather.temperature) return 'bg-xe-gray/20'
 
-    if (weather.temperature <= 6) return 'bg-xe-blue'
-    if (weather.temperature <= 12) return 'bg-xe-green'
-    if (weather.temperature <= 24) return 'bg-xe-yellow'
+    const temperature = Math.round(weather.temperature)
+
+    if (temperature < 8) return 'bg-xe-blue'
+    if (temperature < 18) return 'bg-xe-green'
+    if (temperature < 28) return 'bg-xe-yellow'
 
     return 'bg-xe-red'
   }

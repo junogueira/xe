@@ -47,7 +47,9 @@ const items = computed(() => {
         <div :class="['rounded-full p-4', getColor(item)]">
           <component :is="getIcon(item)" class="size-12" />
         </div>
-        <span class="text-xl text-black"> {{ item.temperature.toFixed() }}°C </span>
+        <span class="text-xl text-black">
+          {{ `${Math.round(item.temperature)}°C` }}
+        </span>
       </div>
     </div>
   </template>

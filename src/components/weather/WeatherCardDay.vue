@@ -50,7 +50,7 @@ const getWeekday = (dateStr: string) => {
           </span>
         </div>
         <span class="ml-auto text-xl text-black lg:ml-0">
-          {{ `${item.temperature.toFixed()}°C` }}
+          {{ `${Math.round(item.temperature)}°C` }}
         </span>
       </div>
     </div>

@@ -32,7 +32,7 @@ const { getColor, getIcon } = useWeatherStyle()
       </div>
       <div class="ml-auto lg:mt-16 lg:ml-0">
         <span class="text-[52px] leading-none font-medium lg:text-[120px]"
-          >{{ data.temperature.toFixed()
+          >{{ Math.round(data.temperature)
           }}<sup class="align-super text-xl lg:text-[32px]">°C</sup></span
         >
       </div>
