@@ -24,25 +24,13 @@ const {
       <AppIconUpdating />
     </div>
     <div class="grid grid-flow-row auto-rows-max gap-8 lg:grid-cols-[256px_auto]">
-      <WeatherCardNow
-        :data="current"
-        :is-loading="isPendingCurrent"
-        :is-fetching="isFetchingCurrent"
-      />
+      <WeatherCardNow :data="current" :is-loading="isPendingCurrent" />
       <div class="grid grid-flow-row auto-rows-max content-center gap-8">
         <div class="overflow-x-auto">
-          <WeatherCardHour
-            :data="forecast?.byHour"
-            :is-loading="isPendingForecast"
-            :is-fetching="isFetchingForecast"
-          />
+          <WeatherCardHour :data="forecast?.byHour" :is-loading="isPendingForecast" />
         </div>
         <div>
-          <WeatherCardDay
-            :data="forecast?.byDay"
-            :is-loading="isPendingForecast"
-            :is-fetching="isFetchingForecast"
-          />
+          <WeatherCardDay :data="forecast?.byDay" :is-loading="isPendingForecast" />
         </div>
       </div>
     </div>

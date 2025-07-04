@@ -3,11 +3,9 @@ withDefaults(
   defineProps<{
     data: WeatherForecast['byDay'] | undefined
     isLoading: boolean
-    isFetching: boolean
   }>(),
   {
     isLoading: false,
-    isFetching: false,
   },
 )
 
