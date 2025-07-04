@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div
     class="flex items-center gap-4 rounded-[10px] border border-red-100 bg-red-50 px-8 py-12 lg:rounded-[30px]"

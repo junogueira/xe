@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="flex flex-nowrap md:gap-6">
     <div class="flex flex-col items-center gap-5 px-8">

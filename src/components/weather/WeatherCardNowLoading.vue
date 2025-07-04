@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <AppSkeleton
     class="bg-xe-gray/20 flex flex-row items-center gap-4 rounded-[20px] p-4 pr-5 lg:flex-col lg:rounded-4xl lg:p-12"
