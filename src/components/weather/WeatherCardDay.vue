@@ -45,7 +45,7 @@ const getWeekday = (dateStr: string) => {
           <span class="text-xe-dark-blue text-lg lg:text-xl">
             {{ getWeekday(item.date) }}
           </span>
-          <span class="text-xe-gray text-center text-xs">
+          <span class="text-xe-gray text-xs lg:text-center">
             {{ item.condition }}
           </span>
         </div>
@@ -56,7 +56,6 @@ const getWeekday = (dateStr: string) => {
     </div>
   </template>
   <template v-else>
-    <!-- TODO -->
-    error
+    <WeatherCardDayError />
   </template>
 </template>

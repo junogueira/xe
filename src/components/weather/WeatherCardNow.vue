@@ -39,7 +39,6 @@ const { getColor, getIcon } = useWeatherStyle()
     </div>
   </template>
   <template v-else>
-    <!-- TODO -->
-    error
+    <WeatherCardNowError />
   </template>
 </template>

@@ -52,7 +52,6 @@ const items = computed(() => {
     </div>
   </template>
   <template v-else>
-    <!-- TODO -->
-    error
+    <WeatherCardHourError />
   </template>
 </template>
