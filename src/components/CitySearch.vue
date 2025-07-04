@@ -30,6 +30,7 @@ const handleSelectCity = (city: WeatherSearchResponse) => {
       <input
         v-model="searchQuery"
         @input="handleSearch"
+        name="search-query"
         type="text"
         placeholder="Search city..."
         class="border-xe-dark-blue focus:outline-xe-blue w-full rounded-full border-2 py-2 pr-10 pl-4 text-sm focus:outline-offset-2"
@@ -49,7 +50,9 @@ const handleSelectCity = (city: WeatherSearchResponse) => {
         v-for="city in data"
         :key="city.id"
         @click="handleSelectCity(city)"
-        class="cursor-pointer px-4 py-2 first:rounded-t-[10px] last:rounded-b-[10px] hover:bg-blue-100"
+        @keydown.enter="handleSelectCity(city)"
+        class="hover:bg-xe-light-blue focus-visible:bg-xe-light-blue cursor-pointer px-4 py-2 first:rounded-t-[10px] last:rounded-b-[10px] focus:outline-0"
+        tabindex="0"
       >
         {{ [city.name, city.region, city.country].join(', ') }}
       </li>
