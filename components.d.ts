@@ -32,6 +32,7 @@ declare module 'vue' {
     IconWeatherWindy: typeof import('./src/components/icon/IconWeatherWindy.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UserInlineEditor: typeof import('./src/components/UserInlineEditor.vue')['default']
     WeatherCardDay: typeof import('./src/components/weather/WeatherCardDay.vue')['default']
     WeatherCardDayError: typeof import('./src/components/weather/WeatherCardDayError.vue')['default']
     WeatherCardDayLoading: typeof import('./src/components/weather/WeatherCardDayLoading.vue')['default']

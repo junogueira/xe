@@ -63,6 +63,7 @@ declare global {
   const useQuery: typeof import('@tanstack/vue-query')['useQuery']
   const useSlots: typeof import('vue')['useSlots']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
+  const useUser: typeof import('./src/composables/useUser')['useUser']
   const useWeatherApi: typeof import('./src/composables/useWeatherApi')['useWeatherApi']
   const useWeatherColor: typeof import('./src/composables/useWeatherIcon')['useWeatherColor']
   const useWeatherConditionIcon: typeof import('./src/composables/useWeatherIcon')['useWeatherConditionIcon']
