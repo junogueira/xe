@@ -26,7 +26,7 @@ const {
     <div class="grid grid-flow-row auto-rows-max gap-8 lg:grid-cols-[256px_auto]">
       <WeatherCardNow :data="current" :is-loading="isPendingCurrent" />
       <div class="grid grid-flow-row auto-rows-max content-center gap-8">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto pb-3">
           <WeatherCardHour :data="forecast?.byHour" :is-loading="isPendingForecast" />
         </div>
         <div>

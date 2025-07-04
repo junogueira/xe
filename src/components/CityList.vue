@@ -4,7 +4,7 @@ const { cities, currentCity, setCurrentCity } = useCity()
 
 <template>
   <div class="flex items-center justify-between">
-    <nav class="overflow-x-auto">
+    <nav class="overflow-x-auto pb-3">
       <ul class="flex flex-row flex-nowrap gap-2">
         <li v-for="city in cities" :key="city.name">
           <button
