@@ -53,8 +53,10 @@ declare global {
   const triggerRef: typeof import('vue')['triggerRef']
   const unref: typeof import('vue')['unref']
   const useAttrs: typeof import('vue')['useAttrs']
+  const useCity: typeof import('./src/composables/useCity')['useCity']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
+  const useDebounceFn: typeof import('@vueuse/core')['useDebounceFn']
   const useFetch: typeof import('@vueuse/core')['useFetch']
   const useId: typeof import('vue')['useId']
   const useModel: typeof import('vue')['useModel']
@@ -77,6 +79,9 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
-  export type { Weather, WeatherCurrent, WeatherForecast } from './src/types/weather'
+  export type { City } from './src/types/city'
+  import('./src/types/city')
+  // @ts-ignore
+  export type { Weather, WeatherCurrent, WeatherForecast, WeatherSearchResponse } from './src/types/weather'
   import('./src/types/weather')
 }

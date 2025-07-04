@@ -93,8 +93,29 @@ export const useWeatherApi = () => {
     })
   }
 
+  const search = (query: Ref<string>) => {
+    return useQuery({
+      enabled: false,
+      queryKey: ['search', query],
+      queryFn: async () => {
+        const response = await fetch(getUrl('search.json', { q: query.value.trim() }), {
+          method: 'GET',
+        })
+
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`)
+        }
+
+        const weather = await response.json()
+        return weather
+      },
+      staleTime: TWO_MINUTES
+    })
+  }
+
   return {
     current,
     forecast,
+    search,
   }
 }

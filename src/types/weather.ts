@@ -19,3 +19,13 @@ export interface WeatherForecast {
     }
   }
 }
+
+export interface WeatherSearchResponse {
+  id: number
+  name: string
+  region: string
+  country: string
+  lat: number
+  lon: number
+  url: string
+}

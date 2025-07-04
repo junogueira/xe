@@ -12,6 +12,8 @@ declare module 'vue' {
     AppSkeleton: typeof import('./src/components/AppSkeleton.vue')['default']
     CityDetails: typeof import('./src/components/CityDetails.vue')['default']
     CityList: typeof import('./src/components/CityList.vue')['default']
+    CitySearch: typeof import('./src/components/CitySearch.vue')['default']
+    IconClose: typeof import('./src/components/icon/IconClose.vue')['default']
     IconWeatherClearCloudy: typeof import('./src/components/icon/IconWeatherClearCloudy.vue')['default']
     IconWeatherCloudy: typeof import('./src/components/icon/IconWeatherCloudy.vue')['default']
     IconWeatherDrizzle: typeof import('./src/components/icon/IconWeatherDrizzle.vue')['default']

@@ -18,7 +18,8 @@ export default defineConfig({
       dirs: ['./src/composables/**', './src/types/**'],
       imports: [
         'vue',
-        { '@tanstack/vue-query': ['useQuery'] }
+        { '@tanstack/vue-query': ['useQuery'] },
+        { '@vueuse/core': ['useDebounceFn'] },
       ],
     }),
     Components({
