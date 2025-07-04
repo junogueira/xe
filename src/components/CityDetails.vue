@@ -1,23 +1,26 @@
 <script setup lang="ts">
-const city = ref('Denver')
+const { currentCity } = useCity()
 const weatherApi = useWeatherApi()
 
 const {
   data: current,
   isPending: isPendingCurrent,
   isFetching: isFetchingCurrent,
-} = weatherApi.current(city)
+} = weatherApi.current(currentCity)
 
 const {
   data: forecast,
   isPending: isPendingForecast,
   isFetching: isFetchingForecast,
-} = weatherApi.forecast(city)
+} = weatherApi.forecast(currentCity)
 </script>
 
 <template>
   <div class="relative">
-    <div v-if="isFetchingCurrent || isFetchingForecast" class="absolute right-0 bottom-0">
+    <div
+      v-if="!(isPendingCurrent || isPendingForecast) && (isFetchingCurrent || isFetchingForecast)"
+      class="absolute right-0 bottom-0"
+    >
       <AppIconUpdating />
     </div>
     <div class="grid grid-flow-row auto-rows-max gap-8 lg:grid-cols-[256px_auto]">

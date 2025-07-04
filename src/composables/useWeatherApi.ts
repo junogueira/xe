@@ -1,5 +1,6 @@
 const API_BASE_URL = 'https://api.weatherapi.com/v1'
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY
+const TWO_MINUTES = 2 * 60 * 1000
 
 export const useWeatherApi = () => {
   const getUrl = (path: string, params: Record<string, string | number>) => {
@@ -7,11 +8,11 @@ export const useWeatherApi = () => {
     return `${API_BASE_URL}/${path}?${queryParams}`
   }
 
-  const current = (city: Ref<string>) => {
+  const current = (city: Ref<City>) => {
     return useQuery({
       queryKey: ['current', city],
       queryFn: async () => {
-        const response = await fetch(getUrl('current.json', { q: city.value }), {
+        const response = await fetch(getUrl('current.json', { q: city.value.name }), {
           method: 'GET',
         })
 
@@ -31,15 +32,16 @@ export const useWeatherApi = () => {
           conditionIcon: data.current.condition.code,
         }
       },
+      staleTime: TWO_MINUTES
     })
   }
 
-  const forecast = (city: Ref<string>) => {
+  const forecast = (city: Ref<City>) => {
     return useQuery({
       queryKey: ['forecast', city],
       queryFn: async () => {
         // NOTE: I'm sending { days: 5 }, but on the free plan they only return 3 days
-        const response = await fetch(getUrl('forecast.json', { q: city.value, days: 5 }), {
+        const response = await fetch(getUrl('forecast.json', { q: city.value.name, days: 5 }), {
           method: 'GET',
         })
 
@@ -87,6 +89,7 @@ export const useWeatherApi = () => {
           byDay,
         }
       },
+      staleTime: TWO_MINUTES
     })
   }
 
