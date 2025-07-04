@@ -10,7 +10,7 @@
       <AppSkeleton class="h-3 w-1/3 lg:mx-auto lg:w-1/3" />
     </div>
     <div class="ml-auto lg:mt-16 lg:ml-0">
-      <AppSkeleton class="h-32 w-25" />
+      <AppSkeleton class="size-14 lg:h-32 lg:w-25" />
     </div>
   </AppSkeleton>
 </template>
