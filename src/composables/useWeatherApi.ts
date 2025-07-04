@@ -32,7 +32,7 @@ export const useWeatherApi = () => {
           conditionIcon: data.current.condition.code,
         }
       },
-      staleTime: TWO_MINUTES
+      staleTime: TWO_MINUTES,
     })
   }
 
@@ -89,7 +89,7 @@ export const useWeatherApi = () => {
           byDay,
         }
       },
-      staleTime: TWO_MINUTES
+      staleTime: TWO_MINUTES,
     })
   }
 
@@ -109,7 +109,7 @@ export const useWeatherApi = () => {
         const weather = await response.json()
         return weather
       },
-      staleTime: TWO_MINUTES
+      staleTime: TWO_MINUTES,
     })
   }
 

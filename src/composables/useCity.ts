@@ -21,6 +21,6 @@ export const useCity = () => {
     cities: readonly(cities),
     currentCity: readonly(currentCity),
     setCurrentCity,
-    addCity
+    addCity,
   }
 }
